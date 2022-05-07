@@ -1,0 +1,20 @@
+ALGORITHM hashtable
+VAR
+    set1 : ARRAY_OF INTEGER[]:=[12,13,6,10];
+    set2 : ARRAY_OF INTEGER[]:=[13,10,16,15];
+    tab : ARRAY_OF INTEGER[];
+    found : BOOLEAN;
+    sum_distinct:INTEGER:=0;
+    sum_commun:INTEGER:=0;
+    HASH_TABLE<INTEGER,INTEGER>
+BEGIN
+    tab:=concat(set1,set2)
+
+    FOR i FROM 0 TO tab.length DO
+     IF (HASH_TABLE.lookup(tab[i])=false) THEN
+         HASH_table.insert(tab[i],1)
+    Else
+        HASH_TABLE.insert(tab[i],HASH_TABLE.get(tab[i]+1))
+     END_IF   
+    END_FOR
+END
