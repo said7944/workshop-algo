@@ -1,0 +1,19 @@
+ALGORITHM dot_product
+VAR
+    v1 : ARRAY_OF INTEGER[3]:=[];
+    v2 : ARRAY_OF INTEGER[3]:=[];
+    i :INTEGER;
+    ps : INTEGER:=0;
+BEGIN
+   FOR i FROM 0 TO i < v1.length  DO
+    FOR i FROM 0 TO i < v2.length  DO
+        ps += v1[i]*v2[i]
+    END_FOR
+    END_FOR
+        IF (ps === 0) THEN
+            return(" dot product  of 2 orthogonal vectors is 0.")
+        ELSE
+            return(" vectors are not orthogona")
+        END_IF
+          return ps
+END
