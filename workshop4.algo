@@ -1,0 +1,14 @@
+ALGORITHM Sorting
+VAR
+    tab:[INTEGER];
+    i:INTEGER;
+    lenghth: INTEGER;
+BEGIN
+  write("insert the length of array");
+  read(length);
+  FOR i FROM 0 TO length-1 STEP 1 DO
+    read(tab[i]);
+  END_FOR
+    sorting(tab,length);
+    write("array stored:",tab);
+END
